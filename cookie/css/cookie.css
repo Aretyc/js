@@ -1,0 +1,30 @@
+.cookie {
+    display: flex;
+    justify-content: center;
+    background-color: #000c;
+    position: fixed;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    color: white;
+}
+.cookie div 
+{
+    display: flex;
+    justify-content: center;
+    align-self: flex-start;
+
+}
+.cookie img 
+{
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    cursor: pointer;
+}
+.cookie p 
+{
+    box-sizing: border-box;
+    padding: 5px;
+    text-align: justify;
+}
