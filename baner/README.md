@@ -9,6 +9,11 @@
 <h2>
 manual 
 </h2>
+
+<aside class="notice">
+    script using jquery framework 
+</aside>
+
 <h3>
     html configuration
 </h3>
@@ -18,14 +23,14 @@ manual
 
 ```html
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./script/aretycBaner.js"></script>
 
 ```
 
  
 <p>
-    you must add in your html document container with <img> element and <div> with first text element 
+    you must add in your html document container with `<img>` element and `<div>` with first text element 
 </p>
 
 
@@ -80,7 +85,7 @@ const baner = new AretycBaner(textArray,conteinerId,imageClassDesktop,imageClass
 
 ```
 
-<p> textArray - array / or flase </p>
+<p> textArray - array with string / or flase </p>
 <p> conteinerId - string </p>
 <p> imageClassDesktop - string </p>
 <p> imageClassMobile - string / or flase</p>
