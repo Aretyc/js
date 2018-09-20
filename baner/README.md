@@ -21,6 +21,7 @@ manual
     <script src="./script/aretycBaner.js"></script> 
 
 ```
+jakiś tekst 
 <p>
     you must add in your html document container with <img> element and <div> with first text element 
 </p>
