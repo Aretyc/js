@@ -15,11 +15,13 @@ manual
 <p>
     first you must add in your head jquery and baner script 
 </p>
+
 ```html
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./script/aretycBaner.js"></script>
 
+```
 
  
 <p>
@@ -78,11 +80,11 @@ const baner = new AretycBaner(textArray,conteinerId,imageClassDesktop,imageClass
 
 ```
 
-textArray - array / or flase 
-conteinerId - string 
-imageClassDesktop - string 
-imageClassMobile - string / or flase
-textContainerId - string / or flase
+<p> textArray - array / or flase </p>
+<p> conteinerId - string </p>
+<p> imageClassDesktop - string </p>
+<p> imageClassMobile - string / or flase</p>
+<p> textContainerId - string / or flase</p>
 
 
 
