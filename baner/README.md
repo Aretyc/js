@@ -15,10 +15,10 @@ manual
 <p>
     first you must add in your head jquery and baner script 
 </p>
-```html  
+```html
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="./script/aretycBaner.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./script/aretycBaner.js"></script> 
 
 ```
 <p>
