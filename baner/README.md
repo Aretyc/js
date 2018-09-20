@@ -13,7 +13,16 @@ manual
     html configuration
 </h3>
 <p>
-    you must add in your html document container with <img> element and <div> with first text element 
+    first you must add in your head jquery and baner script 
+</p>
+```html 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./script/aretycBaner.js"></script> 
+
+```
+<p>
+    you must add in your html document container with ```<img>```element and <div> with first text element 
 </p>
 
 
