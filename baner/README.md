@@ -10,7 +10,7 @@
 manual 
 </h2>
 
-<aside class="notice">
+<aside class="warning">
     script using jquery framework 
 </aside>
 
