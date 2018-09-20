@@ -20,7 +20,7 @@ manual
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="./script/aretycBaner.js"></script>
 
-```
+
  
 <p>
     you must add in your html document container with <img> element and <div> with first text element 
@@ -66,6 +66,23 @@ const text = [
 
 ```
 
+<p>
+    next create new object 
+</p>
+
+
+```javascript
+
+const baner = new AretycBaner(textArray,conteinerId,imageClassDesktop,imageClassMobile,textContainerId);
+
+
+```
+
+textArray - array / or flase 
+conteinerId - string 
+imageClassDesktop - string 
+imageClassMobile - string / or flase
+textContainerId - string / or flase
 
 
 
