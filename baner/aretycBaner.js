@@ -22,13 +22,19 @@
 
         checkId(string)
         {
-            if(string[0]!='#'){string='#'+string}
+          if(string!=false) 
+          {
+              if(string[0]!='#'){string='#'+string}
+          }
             return string;
         }
 
         checkClass(string)
         {
-            if(string[0]!='.'){string='.'+string}
+            if(string!=false) 
+            {
+                if(string[0]!='.'){string='.'+string}
+            }
             return string;  
         }
     
@@ -36,6 +42,8 @@
        {
             this.imgDesktop = document.querySelectorAll(this.deskImgClass);
             this.imgMobile ;
+
+            if(this.text==false){ console.log("baner: text is false ")}
 
             if (this.mobImgClass!=false){
                 this.imgMobile = document.querySelectorAll(this.mobImgClass);
@@ -53,16 +61,20 @@
 
         text_animation()
         {
-            $(this.textContainer+" p").css({
-                position:'relative',
-                "top": "-200px",
-                opacity: '0',
-                
-                });
-            $(this.textContainer+" p").delay(1000).animate({
-                "top": "0px",
-                opacity: '1',
-            },500)
+
+            if(this.text!=false)
+            {
+                $(this.textContainer+" p").css({
+                    position:'relative',
+                    "top": "-200px",
+                    opacity: '0',
+                    
+                    });
+                $(this.textContainer+" p").delay(1000).animate({
+                    "top": "0px",
+                    opacity: '1',
+                },500)
+            }
         }
 
         loop()
@@ -78,7 +90,19 @@
             if(next>elements.length-1){next=0}
 
             // inner html in text container 
-            document.querySelector(this.textContainer).innerHTML='<p>'+this.text[next]+"<p>";
+            if(this.text!=false||this.textContainer!=false)
+            {
+             
+                let container = document.querySelector(this.textContainer);
+                if(container==null){
+                    console.error("baner: wrong container name ")
+                }else
+                {
+                    container.innerHTML='<p>'+this.text[next]+"<p>";
+                }
+                
+            }
+            
 
             // changing image  
             $(elements[next]).css({"z-index" : 1,});      
@@ -92,20 +116,23 @@
 
         text_position()
         {
-            if(window.innerWidth>768||this.mobImgClass==false){
+            if(window.innerWidth>768||this.mobImgClass==false||this.text==false||this.textContainer==false){
             
                 $(this.textContainer).css({
                     "top": $(this.deskImgClass).height()*-0.4+"px",
-                    "left" : $(this.mobImgClass).width()*0.1+"px",
+                    "left" : $(this.deskImgClass).width()*0.1+"px",
                 });
+                
+              
             }
             else
             {
             
                 $(this.textContainer).css({
-                    "top": $(this.deskImgClass).height()*-0.9+"px",
+                    "top": $(this.mobImgClass).height()*-0.4+"px",
                     "left" : $(this.mobImgClass).width()*0.1+"px",
                 });
+           
             }
         }
         
@@ -137,7 +164,7 @@ const text = [
     "WYDRUKI REKLAMOWE",
     "IDENTYFIKACJA WIZUALNA"
 ];
-
+//'aretyc_baner_heder_mob'
 const baner = new AretycBaner(text,'#aretyc_baner_container','aretyc_baner_header','aretyc_baner_heder_mob','aretyc_baner_text_container');
  
 }());
