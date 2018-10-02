@@ -164,7 +164,7 @@ const text = [
     "WYDRUKI REKLAMOWE",
     "IDENTYFIKACJA WIZUALNA"
 ];
-//'aretyc_baner_heder_mob'
+
 const baner = new AretycBaner(text,'#aretyc_baner_container','aretyc_baner_header','aretyc_baner_heder_mob','aretyc_baner_text_container');
  
 }());
