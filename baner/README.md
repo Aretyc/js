@@ -30,7 +30,7 @@ manual
 
  
 <p>
-    you must add in your html document container with `<img>` element and `<div>` with first text element 
+    you must add in your html document container with &amp;img&lt; element and &amp;div&lt; with first text element 
 </p>
 
 
@@ -91,5 +91,17 @@ const baner = new AretycBaner(textArray,conteinerId,imageClassDesktop,imageClass
 <p> imageClassMobile - string / or flase</p>
 <p> textContainerId - string / or flase</p>
 
+<h3>
+    css (recomended) 
+</h3>
+```css
+    #textContainerId
+    {
+        font-size: 30px;
+		color: white;
+		font-weight: bold;
+		font-family: Verdana, sans-serif;
+    }
 
+```
 
