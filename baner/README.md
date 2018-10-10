@@ -94,9 +94,10 @@ const baner = new AretycBaner(textArray,conteinerId,imageClassDesktop,imageClass
 <h3>
     css (recomended) 
 </h3>
+
 ```css
 
-    &#35;textContainerId
+ textContainerId
     {
         font-size: 30px;
 		color: white;
@@ -104,5 +105,9 @@ const baner = new AretycBaner(textArray,conteinerId,imageClassDesktop,imageClass
 		font-family: Verdana, sans-serif;
     }
 
+
+
 ```
+
+
 
