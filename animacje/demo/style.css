@@ -1,0 +1,35 @@
+body
+{
+    margin: 0;
+    background-image: url("../img/background/2.jpg");
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+
+    /*height: 100vh;*/
+    height: 100%;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+.square
+{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    
+}
+.animation
+{
+    margin: 0 auto;
+}
+.anim1_suqare
+{
+    background-color: red;
+
+}
+p
+{
+    width: 300px;
+    text-align: justify;
+}
