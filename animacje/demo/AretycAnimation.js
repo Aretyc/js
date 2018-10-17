@@ -247,6 +247,80 @@ class TextType
 
 }
 
+ class TextRain {
+    constructor(id,time)
+    {
+        this.id = id;  // id element without #
+        this.time = time;       // time animation in ms 
+        this.status =  false;  
+
+        
+        let textPom;
+        let element = document.getElementById(this.id);
+        let text = element.textContent;
+
+       //Remove whitespace 
+        text =  text.trim();
+
+        // add <span> between elenets 
+        textPom="<span>"+text[0]+"</span>";
+        for(let i=1; i<text.length;i++)
+        {
+            textPom = textPom+"<span>"+text[i]+"</span>";     
+        }
+        // inner html in element 
+        element.innerHTML = textPom;
+       
+    }
+    animation()
+    {
+
+        $("#"+this.id+" span").css({position:'relative', top:'-100px', opacity : 0,});
+
+        let elements = document.querySelectorAll("#"+this.id+" span");
+        
+        let lengthElements = elements.length;
+        let tab = new Array(lengthElements);
+
+        for(let i=0;i<lengthElements;i++)
+        {
+            tab[i]=i;
+        }
+
+
+          
+        let i=0;
+        while(lengthElements!=0)
+        {
+            let temp;
+            let randomNumber = Math.floor( Math.random()*lengthElements);
+            temp = tab[randomNumber];
+          //console.log(tab[randomNumber]);
+          console.log(i);
+            $(elements[tab[randomNumber]]).delay(i*10).animate({top:'0px',opacity:"1"},1000);
+
+            tab[randomNumber]=tab[lengthElements-1];
+            tab[lengthElements-1] = temp;
+            lengthElements--;
+            i++;
+             
+        }
+
+       /*
+       let interval =  setInterval(function(){
+         
+           
+           if(elements.length==1)
+           {
+               clearInterval(interval);
+           }
+        },100);    
+*/
+    }
+
+
+ }
+
 
 // get all element with this same query selector 
 // left to right 

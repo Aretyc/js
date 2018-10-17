@@ -33,10 +33,13 @@ window.addEventListener("load",function(){
     });
 
     document.getElementById("btn7").addEventListener("click",function(){
-        const a2_s3 = new TextType("a2_s3",100);
+        const a2_s3 = new TextType("a2_s3",50);
         a2_s3.animation();
     });
-    
+    document.getElementById("btn8").addEventListener("click",function(){
+        const a2_s4 = new TextRain("a2_s4",50);
+        a2_s4.animation();
+    });
     
     });
     
