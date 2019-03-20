@@ -360,6 +360,8 @@ class Standard_animation_3 {
 
 
 
+// pamiętaj aby dodać do niej opis 
+
 
 
 
@@ -399,3 +401,95 @@ class Standard_animation_4 {
             }  
     }
 };
+
+class imageAnimation1
+{
+    constructor(id)
+    {
+        this.id = id; //only id 
+
+
+        // 
+        let content = ' ';
+        for(let i=0; i<10; i++)
+        {
+            content +='<div></div>';
+        }
+        // coment 
+
+        let image = document.querySelector('#'+id+' img');
+        let width = image.offsetWidth;
+        let height = image.offsetHeight;
+
+        $('#'+this.id).append('<div class="image_animation_container">'+content+'</div>');
+
+       // let partContainer = document.querySelector(`#${this.id} .image_animation_container`);
+        
+       
+
+
+        $('#'+this.id).css({
+            width: width,
+            height: height,
+        });
+
+        $(`#${this.id} .image_animation_container`).css({
+            width: width,
+            height: height,
+            display: 'flex',
+            position: 'absolute',
+        });
+
+        $(image).css({
+            opacity: 0,
+            position: 'absolute',
+        });
+        $(`#${this.id} .image_animation_container div`).css({
+            width: '10%',
+            height: '100%',
+            'background-image': 'url("./img/YDXJ0302.jpg")',
+            'background-size': `${width}px ${height}px`,
+            
+        });
+
+        let items =  document.querySelectorAll(`#${this.id} .image_animation_container div`);
+
+        for(let i=0; i<items.length;i++)
+        {
+            $(items[i]).css({
+                'background-position': `-${i*items[i].offsetWidth}px 0px`,
+            })
+        }
+    }
+
+    resize(width,height)
+    {
+        let partContainer = document.querySelector(`#${this.id} .image_animation_container`);
+        
+        
+
+
+    }
+
+
+
+    animation()
+    {
+        let items =  document.querySelectorAll(`#${this.id} .image_animation_container div`);
+
+        $(".image_animation_container div").css({
+            position: 'relative',
+            left: '100px',
+            top: '-10px',
+        })
+
+        for(let i=0; i<items.length;i++)
+        {
+            $(items[i]).delay(i*200).animate({
+                left: '0px',
+                top: "0px",
+            },600);
+
+        }
+    }
+}

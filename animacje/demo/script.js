@@ -40,6 +40,11 @@ window.addEventListener("load",function(){
         const a2_s4 = new TextRain("a2_s4",50);
         a2_s4.animation();
     });
+
+    document.getElementById("btn9").addEventListener("click",function(){
+        const a3_s1 = new imageAnimation1("a3_s1",50);
+        a3_s1.animation();
+    });
     
     });
     
