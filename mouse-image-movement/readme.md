@@ -1,6 +1,10 @@
 # about
 Simple javaScript library that moves the image when you hover your mouse over it
 
+# demo 
+[a link](https://aretyc.github.io/mouse-image-movement/demo/)
+
+
 # Usage
 include  script `mouse-image-movement.js` in your  `head` section 
 ````html
