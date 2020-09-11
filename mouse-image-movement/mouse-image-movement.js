@@ -33,12 +33,13 @@ class moveablePicture{
     }
 
     move(e){
+        console.log("asdas");
         let x = 0;
         let y = 0;
         if (this.oldX < e.pageX) x= -1*this.translationX; else x=this.translationX;
         if (this.oldY < e.pageY) y= -1*this.translationY; else y=this.translationY;
         console.log(x,y)
-        this.image.style.translate = `${x}px ${y}px`;
+        this.image.style.transform= `translate(${x}px, ${y}px)`;
 
         this.oldX = e.pageX;
         this.oldY = e.pageY;
