@@ -26,11 +26,15 @@ class moveablePicture{
         }
         this.image.style.transition = this.time;
 
-        if(!this.error)
-            this.element.addEventListener('mousemove',(e)=>{
-                this.move(e);
-            });
+        if(!this.error){
+            this.element.addEventListener('mousemove',(e)=>{this.move(e);});
+            this.element.addEventListener('mouseout',e=>{this.normal();});
+        }
+            
     }
+    normal(){
+        this.image.style.transform= `translate(0px, 0px)`; 
+    } 
 
     move(e){
         let x = 0;
